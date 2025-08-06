@@ -36,6 +36,16 @@
         margin: 10px;
         font-family: 'Courier New', Courier, monospace;
     }
+    .form {
+        /*make this as a classic google form css*/
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        /*make this center aligned google auth form css*/
+        max-width: 400px;
+        margin: 0 auto;
+    }
     
     </style>
 </head>
@@ -85,6 +95,22 @@
             My goal is to continue growing as a developer and security enthusiast, contributing to the tech community.
             I believe in the importance of continuous learning and staying updated with the latest trends in technology.
         </p>
+    </div>
+    <div class="form">
+        <fieldset>
+            <legend>Contact Me</legend>
+                <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="mail">E-mail:</label><br>
+                    <input type="text" id="mail" name="mail"><br>
+                    <label for="comment">Comment:</label><br>
+                    <input type="text" id="comment" name="comment" size="50"><br>
+                    <br>
+                    <input type="submit" value="Send">
+                    <input type="reset" value="Reset">
+            <p>Feel free to reach out to me for any queries or collaborations.</p>
+        </fieldset>
     </div>
 </body>
 </html>
