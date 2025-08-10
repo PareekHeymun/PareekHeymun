@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heymun Pareek</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
     .centertag {
         text-align: center;
@@ -44,6 +45,10 @@
         padding: 20px;
         /*make this center aligned google auth form css*/
         max-width: 400px;
+        margin: 0 auto;
+    }
+    .center-aligned-iframe {
+        display: block;
         margin: 0 auto;
     }
     
@@ -96,21 +101,26 @@
             I believe in the importance of continuous learning and staying updated with the latest trends in technology.
         </p>
     </div>
-    <div class="form">
-        <fieldset>
-            <legend>Contact Me</legend>
-                <form action="mailto:someone@example.com" method="post" enctype="text/plain">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name"><br>
-                    <label for="mail">E-mail:</label><br>
-                    <input type="text" id="mail" name="mail"><br>
-                    <label for="comment">Comment:</label><br>
-                    <input type="text" id="comment" name="comment" size="50"><br>
-                    <br>
-                    <input type="submit" value="Send">
-                    <input type="reset" value="Reset">
-            <p>Feel free to reach out to me for any queries or collaborations.</p>
-        </fieldset>
+    <div class="flex-container">
+        <div>
+            <iframe src="https://www.youtube.com/embed/fm09_puAN9k" width="640" height="480"></iframe>
+        </div>
+        <div class="form">
+            <fieldset>
+                <legend>Contact Me</legend>
+                    <form action="mailto:{To: heymun.microsoft@gmail.com}" method="post" enctype="text/plain">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="mail">E-mail:</label><br>
+                        <input type="text" id="mail" name="mail"><br>
+                        <label for="comment">Comment:</label><br>
+                        <input type="text" id="comment" name="comment" size="50"><br>
+                        <br>
+                        <input type="submit" value="Send" href="">
+                        <input type="reset" value="Reset">
+                <p>Feel free to reach out to me for any queries or collaborations.</p>
+            </fieldset>
+        </div>        
     </div>
 </body>
 </html>
