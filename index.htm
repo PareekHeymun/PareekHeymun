@@ -5,6 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heymun Pareek</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script>
+        let state = 1; // 1 for dark mode, 0 for light mode
+         function changeButton(){
+            
+            if(state == 1)
+                {
+                    document.getElementById("toggle").innerHTML = "Toggle to Light Mode";
+                    document.body.style.backgroundColor = "black";
+                    document.body.style.color = "white";
+                    document.querySelectorAll(".hero-section").forEach(el => {
+                        el.style.backgroundColor = "#333";
+                        el.style.color = "#fff";
+                    });
+                    document.querySelectorAll(".form").forEach(el => {
+                        el.style.backgroundColor = "#444";
+                        el.style.color = "#fff";
+                    });
+                    document.querySelectorAll(".olden-historical-css-box").forEach(el => {
+                        el.style.backgroundColor = "#555";
+                        el.style.color = "#fff";
+                    });
+                    state = 0;
+                }
+            else
+                {
+                    document.getElementById("toggle").innerHTML = "Toggle to Dark Mode";
+                    document.body.style.backgroundColor = "white";
+                    document.body.style.color = "black";
+                    document.querySelectorAll(".hero-section").forEach(el => {
+                        el.style.backgroundColor = "rgb(255, 255, 255)";
+                        el.style.color = "black";
+                    });
+                    document.querySelectorAll(".form").forEach(el => {
+                        el.style.backgroundColor = "#f9f9f9";
+                        el.style.color = "black";
+                    });
+                    document.querySelectorAll(".olden-historical-css-box").forEach(el => {
+                        el.style.backgroundColor = "#f0f0f0";
+                        el.style.color = "black";
+                    });
+                    state = 1;
+                }
+            }
+    </script>
     <style>
     .centertag {
         text-align: center;
@@ -50,6 +94,24 @@
     .center-aligned-iframe {
         display: block;
         margin: 0 auto;
+    }
+    #toggle{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+        transition: background-color 0.3s ease;
+
     }
     
     </style>
@@ -118,6 +180,7 @@
                         <br>
                         <input type="submit" value="Send" href="">
                         <input type="reset" value="Reset">
+                        </form>
                 <p>Feel free to reach out to me for any queries or collaborations.</p>
             </fieldset>
         </div>        
@@ -162,7 +225,9 @@
     GitHubCalendar(".calendar", "PareekHeymun", { responsive: true , global_stats: false});
 </script>
 <p>Check out my Github and ping me for collaborations</p>
-    </div>
+    
+       
+        <button onclick="changeButton()" id="toggle">Toggle to Dark Mode</button>
     
 </body>
 </html>
